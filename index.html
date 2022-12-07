@@ -5,18 +5,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plants</title>
+  <!-- OG Tags -->
+  <meta property="og:title" content="PetStory Online Zoo">
+  <meta property="og:description" content="Watch your favorite animal online | Online Zoo">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/">
+  <meta property="og:site_name" content="PetStory Online">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Favicon -->
-  <link rel="icon" href="/assets/images/logo.png" type="image/png">
-  <link rel="shortcut icon" href="/assets/images/logo.png" type="image/png">
   <!-- CSS -->
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-  
+  <header class="header" id="header-section">
+    <div class="container">
+      <nav class="nav">
+        <a class="logo" href="/index.html">
+          <img class="logo__img" src="/assets/icons/logo.svg" alt="Plants" title="Plants logo">
+          <span class="logo__text">Plants</span>
+        </a>
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link menu__link_active" href="#">
+              Home
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              About us
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              Service
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              Price
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              Contacts
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main" id="main-block">
+    <section class="offer" id="offer-section">
+      <div class="container">
+        <div class="home">
+          <img class="home__img" src="/assets/images/leafs.png" alt="leafs" title="green leafs">
+          <div class="home__block">
+            <h1 class="home__title">
+              We grow <span class="home__span">plants</span> and give you oxygen
+            </h1>
+            <p class="home__subtitle">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+            <a class="home__link" href="#">
+              Learn more
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
   <script src="/index.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0em;
+  color: #717171;
+}
+
+a,
+a:hover {
+  transition: all 0.7 ease;
+}
+
+.header {
+  padding: 47px 0 42px;
+  background: #edf2ec;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: Inika, serif;
+  font-size: 16px;
+  color: #000000;
+}
+.logo .logo__text {
+  margin-left: -5px;
+}
+.logo:hover {
+  color: #e06733;
+}
+
+.menu {
+  display: flex;
+  align-items: end;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.menu .menu__item {
+  margin-right: 43px;
+}
+.menu .menu__item .menu__link {
+  padding: 0 2px;
+  font-family: Inika, serif;
+  font-size: 16px;
+  color: #010201;
+}
+.menu .menu__item .menu__link:hover {
+  font-weight: 700;
+  color: #e06733;
+}
+.menu .menu__item .menu__link_active {
+  font-weight: 700;
+  color: #e06733;
+  cursor: auto;
+}
+.menu .menu__item:last-child {
+  margin-right: 0;
+}
+
+.offer {
+  background: #edf2ec;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  padding: 67px 0 55px;
+}
+.home .home__img {
+  margin-left: -7px;
+}
+.home .home__block {
+  width: 550px;
+}
+.home .home__block .home__title {
+  margin: 45px 0 44px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.1em;
+  color: #717171;
+}
+.home .home__block .home__title .home__span {
+  color: #499a18;
+}
+.home .home__block .home__subtitle {
+  padding-right: 20px;
+  line-height: 1.75em;
+  margin-bottom: 55px;
+}
+.home .home__block .home__link {
+  margin-top: 48px;
+  padding: 10px 26px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid #e06733;
+  border-radius: 10px;
+}
+.home .home__block .home__link:hover {
+  color: #ffffff;
+  background: #e06733;
+}
+
+.container {
+  width: 1222px;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */
