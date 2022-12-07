@@ -1,0 +1,120 @@
+@import "../core/typography";
+@import "../components/buttons";
+@import "../components/cards";
+
+.service {
+  padding: 40px 0;
+  background: $bgcolor-lightgreen;
+}
+
+.project {
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+
+  .project__title {
+    width: 306px;
+  }
+
+  .project__types {
+    margin-left: 142px;
+    width: 559px;
+    display: flex;
+    justify-content: space-between;
+
+    .project__btn {
+      @extend %service-btn;
+      margin-top: 5px;
+    }
+
+    .project__btn_active {
+      @extend %active-btn;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .card__item {
+    margin-bottom: 55px;
+    width: 330px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    .card__border {
+      @extend %garden-card-name;
+
+      .card__title {
+        @extend %garden-card-title;
+      }
+
+      .card__text {
+        @extend %garden-card-text;
+      }
+    }
+  }
+
+  .card__item_blur {
+    filter: blur(2px);
+  }
+}
+
+.card__overflow {
+  position: relative;
+
+  .card__img {
+    transition: 1.5s;
+
+    &:hover {
+      transform: scale(1.6);
+      animation: slide 3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes slide {
+    10%  {transform: card__img(1.1);}
+    50% {transform: card__img(1.3);}
+    100% {transform: card__img(1.6);}
+  }
+
+  .card__title_over {
+    @extend %garden-card-title;
+    @extend %garden-over-card;
+    top: 130px;
+    font-size: 30px;
+  }
+
+  .card__text_over {
+    @extend %garden-over-card;
+    top: 190px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &:hover .card__img {
+    filter: brightness(50%);
+  }
+
+  &:hover .card__title_over {
+    display: block;
+    animation: title-slide 1s ease-in-out forwards;
+  }
+
+  &:hover .card__text_over {
+    display: block;
+    animation: text-slide 1s ease-in-out forwards;
+  }
+
+  @keyframes title-slide {
+    from {top: 100px; opacity: 0;}
+    to {top: 130px; opacity: 1;}
+  }
+
+  @keyframes text-slide {
+    from {top: 160px; opacity: 0;}
+    to {top: 190px; opacity: 1;}
+  }
+}

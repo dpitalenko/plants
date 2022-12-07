@@ -7,7 +7,20 @@ body {
   color: $color-lightgray;
 }
 
+div, 
+p {
+  box-sizing: border-box;
+}
+
 a,
 a:hover {
   transition: all 0.7 ease;
+}
+
+h2 {
+  margin: 0;
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 40px;
+  color: $color-green;
 }
