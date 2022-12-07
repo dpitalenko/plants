@@ -1,0 +1,32 @@
+@import "../core/typography";
+
+.about {
+  margin: 90px;
+}
+
+.us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gardener {
+  width: 605px;
+
+  .gardener__title {
+    margin: 14px 0 40px;
+    padding-right: 20px;
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 40px;
+    color: $color-green;
+  
+    .gardener__span {
+      color: $color-orange;
+    }
+  }
+
+  .gardener__text {
+    line-height: 1.5em;
+  }
+}

@@ -130,6 +130,34 @@ a:hover {
   background: #e06733;
 }
 
+.about {
+  margin: 90px;
+}
+
+.us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gardener {
+  width: 605px;
+}
+.gardener .gardener__title {
+  margin: 14px 0 40px;
+  padding-right: 20px;
+  font-family: Inika, serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #499a18;
+}
+.gardener .gardener__title .gardener__span {
+  color: #e06733;
+}
+.gardener .gardener__text {
+  line-height: 1.5em;
+}
+
 .container {
   width: 1222px;
   margin: 0 auto;
