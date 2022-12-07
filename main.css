@@ -33,9 +33,24 @@ p {
   box-sizing: border-box;
 }
 
-a,
-a:hover {
-  transition: all 0.7 ease;
+h2 {
+  margin: 0;
+  font-family: Inika, serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #499a18;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0em;
+  color: #717171;
+}
+
+div,
+p {
+  box-sizing: border-box;
 }
 
 h2 {
@@ -137,10 +152,12 @@ h2 {
   text-transform: uppercase;
   border: 2px solid #e06733;
   border-radius: 10px;
+  transition: all 0.5s ease;
 }
 .home .home__block .home__link:hover {
   color: #ffffff;
   background: #e06733;
+  transition: all 0.5s ease;
 }
 
 .about {
@@ -302,12 +319,12 @@ h2 {
   filter: brightness(50%);
 }
 .card__overflow:hover .card__title_over {
-  display: block;
+  display: inline;
   -webkit-animation: title-slide 1s ease-in-out forwards;
           animation: title-slide 1s ease-in-out forwards;
 }
 .card__overflow:hover .card__text_over {
-  display: block;
+  display: inline;
   -webkit-animation: text-slide 1s ease-in-out forwards;
           animation: text-slide 1s ease-in-out forwards;
 }

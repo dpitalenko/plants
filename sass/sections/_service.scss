@@ -45,7 +45,7 @@
     border-radius: 20px;
 
     .card__border {
-      @extend %garden-card-name;
+      @extend %garden-card;
 
       .card__title {
         @extend %garden-card-title;
@@ -61,6 +61,7 @@
     filter: blur(2px);
   }
 }
+
 
 .card__overflow {
   position: relative;
@@ -99,12 +100,12 @@
   }
 
   &:hover .card__title_over {
-    display: block;
+    display: inline;
     animation: title-slide 1s ease-in-out forwards;
   }
 
   &:hover .card__text_over {
-    display: block;
+    display: inline;
     animation: text-slide 1s ease-in-out forwards;
   }
 
