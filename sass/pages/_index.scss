@@ -19,3 +19,12 @@ h2 {
   font-size: 40px;
   color: $color-green;
 }
+
+h3 {
+  margin: 0;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 40px;
+  color: $color-black;
+  line-height: 1.25em;
+}
