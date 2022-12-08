@@ -1,5 +1,9 @@
 @import "../core/typography";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-main;
   font-size: 20px;
