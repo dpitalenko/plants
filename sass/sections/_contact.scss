@@ -1,0 +1,170 @@
+@import "../core/typography";
+@import "../components/drop-down";
+
+.contact {
+
+  background: $bgcolor-lightgreen url('../../assets/images/garden-woman.png') no-repeat 107px bottom;
+  padding: 61px 0 83px;
+}
+
+
+.contact-title {
+  margin-bottom: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.city {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .city__block {
+    @extend %city-block;
+
+    &:hover {
+      @extend %active-city-block;
+      transition: all 0.5s ease;
+    }
+
+    &:hover .city__arrow {
+      background: $bgcolor-darkgreen;
+      transition: all 0.5s ease;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  
+    .city__text {
+      letter-spacing: 0.05em;
+    }
+  
+    .city__arrow {
+      @extend %city-circle;
+      background: $color-land;
+
+      &::before {
+        @extend %city-line;
+        left: 5.5px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        @extend %city-line;
+        left: 7.5px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .city__block_active {
+    @extend %active-city-block;
+
+    .city__arrow {
+      background: $bgcolor-darkgreen;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .city__list {
+    @extend %city-list;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: none;
+
+    .city__item {
+      @extend %city-name;
+
+      &:hover {
+        color: $color-lightgray;
+        cursor: pointer;
+
+        &::after {
+          border: 0.5px solid $color-lightgray;
+        }
+      }
+
+      &::after {
+        @extend %city-name-line;
+      }
+    }
+  }
+}
+
+.address {
+  padding: 22px 33px 32px;
+  margin: 47px 0 0 auto;
+  width: 448px;
+  border: 1px solid $color-black;
+  border-radius: 20px;
+  opacity: 0;
+
+  .address__item {
+    margin-bottom: 16px;
+
+    .address__key {
+      font-size: 16px;
+      color: $color-black;
+      letter-spacing: 0.05em;
+    }
+    
+    .address__key_city {
+      margin-right: 105px;
+    }
+
+    .address__key_phone {
+      margin-right: 84px;
+    }
+
+    .address__key_office {
+      margin-right: 15px;
+    }
+  
+    .address__value {
+      font-size: 16px;
+      color: $color-lightgray;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .address__call {
+    display: block;
+    margin: 28px auto 0;
+    box-sizing: border-box;
+    width: 122px;
+    padding: 5px 0;
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: center;
+    color: $color-lightgray;
+    border: 1px solid $color-orange;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-white;
+      background: $color-orange;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+
+
+
+

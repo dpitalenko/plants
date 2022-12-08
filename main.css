@@ -462,7 +462,7 @@ h3 {
 }
 
 .price {
-  margin: 37px 0 100px;
+  margin: 37px 0 107px;
 }
 
 .wrap {
@@ -623,6 +623,185 @@ h3 {
 .help .help__img {
   display: block;
   margin: 34px 0 0 auto;
+}
+
+.city .city__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 35px 10px 35px;
+  width: 448px;
+  height: 50px;
+  background: #d6e7d2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #d6e7d2;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.city .city__block .city__arrow {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+}
+
+.city .city__block .city__arrow::after, .city .city__block .city__arrow::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 3px;
+  height: 0.5px;
+  border-radius: 100px;
+  top: 8px;
+  background: #ffffff;
+}
+
+.city .city__block_active, .city .city__block:hover {
+  background: #c1e698;
+  box-shadow: none;
+}
+
+.city .city__list {
+  padding: 38px 25px 31px 35px;
+  width: 448px;
+  height: 234px;
+  background: #dce9d9;
+}
+
+.city .city__list .city__item {
+  margin-bottom: 20px;
+  padding-left: 7px;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #499a18;
+  letter-spacing: 0.05em;
+}
+
+.city .city__list .city__item::after {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  margin-left: -7px;
+  border: 0.5px solid #d9d9d9;
+}
+
+.contact {
+  background: #edf2ec url("../../assets/images/garden-woman.png") no-repeat 107px bottom;
+  padding: 61px 0 83px;
+}
+
+.contact-title {
+  margin-bottom: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.city {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.city .city__block:hover {
+  transition: all 0.5s ease;
+}
+.city .city__block:hover .city__arrow {
+  background: #8ba07e;
+  transition: all 0.5s ease;
+}
+.city .city__block:hover .city__arrow::before {
+  transform: rotate(-45deg);
+}
+.city .city__block:hover .city__arrow::after {
+  transform: rotate(45deg);
+}
+.city .city__block .city__text {
+  letter-spacing: 0.05em;
+}
+.city .city__block .city__arrow {
+  background: #aea1a1;
+}
+.city .city__block .city__arrow::before {
+  left: 5.5px;
+  transform: rotate(45deg);
+}
+.city .city__block .city__arrow::after {
+  left: 7.5px;
+  transform: rotate(-45deg);
+}
+.city .city__block_active .city__arrow {
+  background: #8ba07e;
+}
+.city .city__block_active .city__arrow::before {
+  transform: rotate(-45deg);
+}
+.city .city__block_active .city__arrow::after {
+  transform: rotate(45deg);
+}
+.city .city__list {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
+}
+.city .city__list .city__item:hover {
+  color: #717171;
+  cursor: pointer;
+}
+.city .city__list .city__item:hover::after {
+  border: 0.5px solid #717171;
+}
+.address {
+  padding: 22px 33px 32px;
+  margin: 47px 0 0 auto;
+  width: 448px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  opacity: 0;
+}
+.address .address__item {
+  margin-bottom: 16px;
+}
+.address .address__item .address__key {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.05em;
+}
+.address .address__item .address__key_city {
+  margin-right: 105px;
+}
+.address .address__item .address__key_phone {
+  margin-right: 84px;
+}
+.address .address__item .address__key_office {
+  margin-right: 15px;
+}
+.address .address__item .address__value {
+  font-size: 16px;
+  color: #717171;
+  letter-spacing: 0.05em;
+}
+.address .address__call {
+  display: block;
+  margin: 28px auto 0;
+  box-sizing: border-box;
+  width: 122px;
+  padding: 5px 0;
+  font-family: Inika, serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  color: #717171;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.address .address__call:hover {
+  color: #ffffff;
+  background: #e06733;
+  transition: all 0.5s ease;
 }
 
 .container {
