@@ -138,6 +138,37 @@ h3 {
   margin-right: 0;
 }
 
+.footer {
+  padding: 46px 0;
+}
+
+.credits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+}
+.credits .copyrigth__item {
+  margin-right: 15px;
+}
+.credits .copyrigth__item:last-child {
+  margin-right: 0;
+}
+.credits .media__link {
+  margin-right: 14px;
+}
+.credits .media__link:last-child {
+  margin-right: 0;
+}
+.credits .media__link svg {
+  fill: #000000;
+  transition: all 0.5s ease;
+}
+.credits .media__link svg:hover {
+  fill: #e06733;
+  transition: all 0.5s ease;
+}
+
 .offer {
   background: #edf2ec;
 }
@@ -689,7 +720,7 @@ h3 {
 
 .contact {
   background: #edf2ec url("../../assets/images/garden-woman.png") no-repeat 107px bottom;
-  padding: 61px 0 83px;
+  padding: 61px 0 90px;
 }
 
 .contact-title {
