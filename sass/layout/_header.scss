@@ -4,11 +4,24 @@
 .header {
   padding: 49px 0 42px;
   background: $bgcolor-lightgreen;
+
+  @media screen and (max-width: 991.98px) {
+    padding: 43px 0 42px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    padding: 34px 0 15px;
+  }
 }
 
 .nav {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767.98px) {
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 
 .logo {
@@ -64,5 +77,75 @@
 
   .menu__item:last-child {
     margin-right: 0;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+}
+
+.hidden-menu {
+  display: none;
+
+  .hidden-menu__item {
+    margin-bottom: 6px;
+    width: 40px;
+    height: 2px;
+    background: $color-lightgray;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: block;
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  padding: 30px 30px 30px 50px;
+  background: $bgcolor-green url('../../assets/images/small-leafs.png') no-repeat right bottom;
+
+  .burger__close {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 0;
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: $color-lightgray;
+      border-radius: 100px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 0;
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: $color-lightgray;
+      border-radius: 100px;
+      transform: rotate(-45deg);
+    }
+  }
+  .burger__menu {
+    display: block;
+
+    .menu__item {
+      margin-bottom: 25px;
+    }
   }
 }

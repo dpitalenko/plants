@@ -2,6 +2,10 @@
 
 .footer {
   padding: 46px 0;
+
+  @media screen and (max-width: 991.98px) {
+    padding: 32px 0;
+  }
 }
 
 .credits {
@@ -15,6 +19,12 @@
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  .rss {
+    @media screen and (max-width: 991.98px) {
+      margin: 16px 0 28px;
     }
   }
 
@@ -34,6 +44,10 @@
         transition: all 0.5s ease;
       }
     }
+  }
+
+  @media screen and (max-width: 991.98px) {
+    flex-direction: column;
   }
 }
 

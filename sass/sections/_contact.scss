@@ -2,9 +2,14 @@
 @import "../components/drop-down";
 
 .contact {
-
   background: $bgcolor-lightgreen url('../../assets/images/garden-woman.png') no-repeat 107px bottom;
   padding: 61px 0 90px;
+
+  @media screen and (max-width: 991.98px) {
+    padding: 41px 0 237px;
+    background-position: center bottom;
+    background-size: 26%;
+  }
 }
 
 
@@ -12,6 +17,11 @@
   margin-bottom: 36px;
   font-weight: 700;
   text-align: center;
+
+  @media screen and (max-width: 991.98px) {
+    font-size: 40px;
+    margin-bottom: 98px;
+  }
 }
 
 .city {
@@ -102,6 +112,10 @@
         @extend %city-name-line;
       }
     }
+  }
+
+  @media screen and (max-width: 991.98px) {
+    align-items: center;
   }
 }
 
