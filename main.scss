@@ -12,4 +12,24 @@
 .container {
   width: 1222px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1399.98px) {
+    width: 1140px;
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    width: 960px;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    width: 720px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    width: 540px;
+  }
+
+  @media screen and (max-width: 575.98px) {
+    width: 90%;
+  }
 }

@@ -25,4 +25,14 @@
   .gardener__text {
     line-height: 1.5em;
   }
+
+  @media screen and (max-width: 1199.98px) {
+    margin-right: 50px;
+  }
+}
+
+.gardener__img {
+  @media screen and (max-width: 1199.98px) {
+    width: 40%;
+  }
 }

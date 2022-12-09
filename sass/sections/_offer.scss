@@ -11,6 +11,10 @@
 
   .home__img {
     margin-left: -7px;
+
+    @media screen and (max-width: 1199.98px) {
+      width: 39%;
+    }
   }
 
   .home__block {
@@ -51,6 +55,10 @@
         background: $color-orange;
         transition: all 0.5s ease;
       }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      margin-left: 50px;
     }
   }
 }

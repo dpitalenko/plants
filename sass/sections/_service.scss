@@ -30,6 +30,10 @@
     .project__btn_active {
       @extend %active-btn;
     }
+
+    @media screen and (max-width: 1199.98px) {
+      margin-left: 100px;
+    }
   }
 }
 
@@ -90,6 +94,10 @@
 
   .card__item_blur {
     filter: blur(2px);
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    justify-content: space-around;
   }
 }
 
