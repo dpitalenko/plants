@@ -88,7 +88,7 @@ h3 {
 }
 
 .header {
-  padding: 47px 0 42px;
+  padding: 49px 0 42px;
   background: #edf2ec;
 }
 
@@ -117,13 +117,17 @@ h3 {
   margin-right: 0;
 }
 .menu .menu__item {
-  margin-right: 43px;
+  margin-right: 48px;
+}
+.menu .menu__item:nth-child(2) .menu__link {
+  width: 67px;
 }
 .menu .menu__item .menu__link {
-  padding: 0 2px;
+  display: block;
   font-family: Inika, serif;
   font-size: 16px;
   color: #010201;
+  font-weight: 400;
 }
 .menu .menu__item .menu__link:hover {
   font-weight: 700;
