@@ -161,6 +161,14 @@
           background: $color-land;
           margin: 7px 0;
         }
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 9px;
+
+          &::before {
+            width: 104px;
+          }
+        }
       }
 
       .price-type__price {
@@ -186,6 +194,18 @@
             margin: 0 4px 0 3px;
           }
         }
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 10px;
+
+          .price {
+            font-size: 14px;
+          }
+          
+          &::before {
+            width: 104px;
+          }
+        }
       }
 
       .price-type__order {
@@ -205,6 +225,13 @@
           color: $color-white;
           background: $color-lightgray;
           transition: all 0.5s ease;
+        }
+
+        @media screen and (max-width: 767.98px) {
+          width: 66px;
+          height: 23px;
+          padding: 4px 15px;
+          font-size: 12px;
         }
       }
     }

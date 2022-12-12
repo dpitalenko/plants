@@ -10,6 +10,10 @@
     background-position: center bottom;
     background-size: 26%;
   }
+
+  @media screen and (max-width: 767.98px) {
+    padding: 25px 0 29px;
+  }
 }
 
 
@@ -21,6 +25,11 @@
   @media screen and (max-width: 991.98px) {
     font-size: 40px;
     margin-bottom: 98px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    font-size: 25px;
+    margin-bottom: 44px;
   }
 }
 
@@ -71,6 +80,11 @@
         transform: rotate(-45deg);
       }
     }
+
+    @media screen and (max-width: 767.98px) {
+      width: 300px;
+      padding: 11px 23px 10px 16px;
+    }
   }
 
   .city__block_active {
@@ -112,6 +126,12 @@
         @extend %city-name-line;
       }
     }
+
+    @media screen and (max-width: 767.98px) {
+      width: 300px;
+      left: 0;
+      margin: 0 auto;
+    }
   }
 
   @media screen and (max-width: 991.98px) {
@@ -134,24 +154,55 @@
       font-size: 16px;
       color: $color-black;
       letter-spacing: 0.05em;
+
+      @media screen and (max-width: 767.98px) {
+        margin-bottom: 5px;
+      }
     }
     
     .address__key_city {
       margin-right: 105px;
+
+      @media screen and (max-width: 767.98px) {
+        margin-right: 48px;
+      }
     }
 
     .address__key_phone {
       margin-right: 84px;
+
+      @media screen and (max-width: 767.98px) {
+        margin-right: 30px;
+      }
     }
 
     .address__key_office {
       margin-right: 15px;
+
+      @media screen and (max-width: 767.98px) {
+        display: inline-block;
+        width: 70px;
+      }
     }
   
     .address__value {
       font-size: 16px;
       color: $color-lightgray;
       letter-spacing: 0.05em;
+    }
+
+    .address__value_office {
+      @media screen and (max-width: 767.98px) {
+        display: inline-block;
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      display: flex;
+
+      &:nth-child(2) {
+        margin-bottom: 6px;
+      }
     }
   }
 
@@ -175,6 +226,16 @@
       background: $color-orange;
       transition: all 0.5s ease;
     }
+
+    @media screen and (max-width: 767.98px) {
+      margin-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    margin: 49px auto 0;
+    padding: 33px 28px 24px 32px;
+    width: 300px;
   }
 }
 
