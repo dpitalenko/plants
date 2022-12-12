@@ -607,7 +607,7 @@ h3 {
   border: 1px solid #e06733;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   margin-top: 5px;
 }
 .project .project__types .project__btn:hover {
@@ -717,6 +717,9 @@ h3 {
 }
 .card .card__item_blur {
   filter: blur(2px);
+  pointer-events: none;
+  -webkit-animation: blur 0.5s ease-in-out forwards;
+          animation: blur 0.5s ease-in-out forwards;
 }
 @media screen and (max-width: 1199.98px) {
   .card {
@@ -796,6 +799,22 @@ h3 {
   to {
     top: 190px;
     opacity: 1;
+  }
+}
+@-webkit-keyframes blur {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(2px);
+  }
+}
+@keyframes blur {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(2px);
   }
 }
 .project .project__types .project__btn_active {
@@ -963,6 +982,8 @@ h3 {
 }
 .price-type .price-type__item_active .price-type__info {
   display: block;
+  -webkit-animation: price-text 0.7s ease-in-out forwards;
+          animation: price-text 0.7s ease-in-out forwards;
 }
 .price-type .price-type__item_active .price-type__info .price-type__more {
   position: relative;
@@ -1132,6 +1153,23 @@ h3 {
   }
 }
 
+@-webkit-keyframes price-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes price-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .city .city__block {
   display: flex;
   justify-content: space-between;

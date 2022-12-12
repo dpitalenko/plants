@@ -38,7 +38,7 @@
       border: 1px solid $color-orange;
       border-radius: 5px;
       cursor: pointer;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
       margin-top: 5px;
 
       &:hover {
@@ -162,7 +162,11 @@
 
   .card__item_blur {
     filter: blur(2px);
+    pointer-events: none;
+    animation: blur 0.5s ease-in-out forwards;
   }
+
+  
 
   @media screen and (max-width: 1199.98px) {
     justify-content: space-around;
@@ -193,4 +197,9 @@
 @keyframes text-slide {
   from {top: 160px; opacity: 0;}
   to {top: 190px; opacity: 1;}
+}
+
+@keyframes blur {
+  from {filter: blur(0px);}
+  to {filter: blur(2px);}
 }

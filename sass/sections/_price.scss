@@ -146,6 +146,7 @@
 
     .price-type__info {
       display: block;
+      animation: price-text 0.7s ease-in-out forwards;
 
       .price-type__more {
         position: relative;
@@ -321,4 +322,9 @@
   @media screen and (max-width: 767.98px) {
     width: 100%;
   }
+}
+
+@keyframes price-text {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
