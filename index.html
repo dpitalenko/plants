@@ -21,7 +21,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/main.css">
 </head>
-<body>
+<body id="body">
   <header class="header" id="header-section">
     <div class="container">
       <nav class="nav">
@@ -62,8 +62,8 @@
           <div class="hidden-menu__item"></div>
           <div class="hidden-menu__item"></div>
         </div>
-        <div class="burger">
-          <div class="burger__close"></div>
+        <div class="burger" id="burger-menu">
+          <div class="burger__close" onclick="closeMenu()"></div>
           <ul class="menu burger__menu">
             <li class="menu__item">
               <a class="menu__link menu__link_active" href="#">

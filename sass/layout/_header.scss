@@ -4,6 +4,7 @@
 .header {
   padding: 49px 0 42px;
   background: $bgcolor-lightgreen;
+  
 
   @media screen and (max-width: 991.98px) {
     padding: 43px 0 42px;
@@ -111,6 +112,8 @@
   width: 100%;
   padding: 30px 30px 30px 50px;
   background: $bgcolor-green url('../../assets/images/small-leafs.png') no-repeat right bottom;
+  box-shadow: 0 0 0 9999px rgba(0,0,0, 0.5);
+  animation: show 0.5s linear forwards;
 
   .burger__close {
     position: relative;
@@ -147,5 +150,23 @@
     .menu__item {
       margin-bottom: 25px;
     }
+  }
+}
+
+
+.burger-visible {
+  display: block;
+}
+
+.remove-scroll {
+  overflow: hidden;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
