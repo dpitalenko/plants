@@ -4,6 +4,7 @@
 
 const burgerMenu = document.querySelector(".hidden-menu");
 const menu = document.querySelector(".burger");
+const link = document.querySelectorAll(".burger .menu__link");
 const body = document.querySelector("#body");
 
 const stopScroll = "remove-scroll";
@@ -18,6 +19,13 @@ burgerMenu.addEventListener("click", function (e) {
   e.stopPropagation();
   toggleMenu();
 });
+
+link.forEach((value) => {
+  value.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+})
 
 document.addEventListener("click", function (e) {
   const target = e.target;
