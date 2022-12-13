@@ -1,0 +1,172 @@
+@import "../core/typography";
+@import "../pages/index";
+
+.header {
+  padding: 49px 0 42px;
+  background: $bgcolor-lightgreen;
+  
+
+  @media screen and (max-width: 991.98px) {
+    padding: 43px 0 42px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    padding: 34px 0 15px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767.98px) {
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-family: $font-title;
+  font-size: 16px;
+  color: $color-black;
+
+  .logo__text {
+    margin-left: -5px;
+  }
+
+  &:hover {
+    color: $color-orange;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: end;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: 0;
+
+  .menu__item {
+    margin-right: 48px;
+
+    &:nth-child(2) {
+      .menu__link {
+        width: 67px;
+      }
+    }
+
+    .menu__link {
+      display: block;
+      font-family: $font-title;
+      font-size: 16px;
+      color: $color-links;
+      font-weight: 400;
+
+      &:hover {
+        font-weight: 700;
+        color: $color-orange;
+      }
+
+    }
+
+    .menu__link_active {
+      font-weight: 700;
+      color: $color-orange;
+      cursor: auto;
+    }
+  }
+
+  .menu__item:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+}
+
+.hidden-menu {
+  display: none;
+
+  .hidden-menu__item {
+    margin-bottom: 6px;
+    width: 40px;
+    height: 2px;
+    background: $color-lightgray;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: block;
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  padding: 30px 30px 30px 50px;
+  background: $bgcolor-green url('../../assets/images/small-leafs.png') no-repeat right bottom;
+  box-shadow: 0 0 0 9999px rgba(0,0,0, 0.5);
+  animation: show 0.5s linear forwards;
+
+  .burger__close {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 0;
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: $color-lightgray;
+      border-radius: 100px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 0;
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: $color-lightgray;
+      border-radius: 100px;
+      transform: rotate(-45deg);
+    }
+  }
+  .burger__menu {
+    display: block;
+
+    .menu__item {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+
+.burger-visible {
+  display: block;
+}
+
+.remove-scroll {
+  overflow: hidden;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

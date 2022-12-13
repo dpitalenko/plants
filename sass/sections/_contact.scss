@@ -1,0 +1,251 @@
+@import "../core/typography";
+@import "../components/drop-down";
+
+.contact {
+  background: $bgcolor-lightgreen url('../../assets/images/garden-woman.png') no-repeat 107px bottom;
+  padding: 61px 0 90px;
+
+  @media screen and (max-width: 991.98px) {
+    padding: 41px 0 237px;
+    background-position: center bottom;
+    background-size: 20%;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    padding: 25px 0 29px;
+    background-size: 26%;
+  }
+}
+
+.contact-title {
+  margin-bottom: 36px;
+  font-weight: 700;
+  text-align: center;
+
+  @media screen and (max-width: 991.98px) {
+    font-size: 40px;
+    margin-bottom: 98px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    font-size: 25px;
+    margin-bottom: 44px;
+  }
+}
+
+.city {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .city__block {
+    @extend %city-block;
+
+    &:hover {
+      @extend %active-city-block;
+      transition: all 0.5s ease;
+    }
+
+    &:hover .city__arrow {
+      background: $bgcolor-darkgreen;
+      transition: all 0.5s ease;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  
+    .city__text {
+      letter-spacing: 0.05em;
+    }
+  
+    .city__arrow {
+      @extend %city-circle;
+      background: $color-land;
+
+      &::before {
+        @extend %city-line;
+        left: 5.5px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        @extend %city-line;
+        left: 7.5px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      width: 300px;
+      padding: 11px 23px 10px 16px;
+    }
+  }
+
+  .city__block_active {
+    @extend %active-city-block;
+
+    .city__arrow {
+      background: $bgcolor-darkgreen;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .city__list {
+    @extend %city-list;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 10;
+    display: none;
+    animation: showList 0.5s ease;
+
+    .city__item {
+      @extend %city-name;
+
+      &:hover {
+        color: $color-lightgray;
+
+        &::after {
+          border: 0.5px solid $color-lightgray;
+        }
+      }
+
+      &::after {
+        @extend %city-name-line;
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      width: 300px;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 991.98px) {
+    align-items: center;
+  }
+}
+
+.address {
+  padding: 22px 33px 32px;
+  margin: 47px 0 0 auto;
+  width: 448px;
+  border: 1px solid $color-black;
+  border-radius: 20px;
+  opacity: 0;
+
+  .address__item {
+    margin-bottom: 16px;
+
+    .address__key {
+      font-size: 16px;
+      color: $color-black;
+      letter-spacing: 0.05em;
+
+      @media screen and (max-width: 767.98px) {
+        margin-bottom: 5px;
+      }
+    }
+    
+    .address__key_city {
+      margin-right: 105px;
+
+      @media screen and (max-width: 767.98px) {
+        margin-right: 48px;
+      }
+    }
+
+    .address__key_phone {
+      margin-right: 84px;
+
+      @media screen and (max-width: 767.98px) {
+        margin-right: 30px;
+      }
+    }
+
+    .address__key_office {
+      margin-right: 15px;
+
+      @media screen and (max-width: 767.98px) {
+        display: inline-block;
+        width: 70px;
+      }
+    }
+  
+    .address__value {
+      font-size: 16px;
+      color: $color-lightgray;
+      letter-spacing: 0.05em;
+    }
+
+    .address__value_office {
+      @media screen and (max-width: 767.98px) {
+        display: inline-block;
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      display: flex;
+
+      &:nth-child(2) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .address__call {
+    display: block;
+    margin: 28px auto 0;
+    box-sizing: border-box;
+    width: 122px;
+    padding: 5px 0;
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: center;
+    color: $color-lightgray;
+    border: 1px solid $color-orange;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-white;
+      background: $color-orange;
+      transition: all 0.5s ease;
+    }
+
+    @media screen and (max-width: 767.98px) {
+      margin-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 991.98px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    margin: 49px auto 0;
+    padding: 33px 28px 24px 32px;
+    width: 300px;
+  }
+}
+
+@keyframes showList {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

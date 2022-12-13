@@ -1,0 +1,35 @@
+@import "sass/core/reset";
+@import "sass/pages/index";
+@import "sass/layout/header";
+@import "sass/layout/footer";
+@import "sass/sections/offer";
+@import "sass/sections/about";
+@import "sass/sections/service";
+@import "sass/sections/price";
+@import "sass/sections/contact";
+
+
+.container {
+  width: 1222px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1399.98px) {
+    width: 1140px;
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    width: 960px;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    width: 87%;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    width: 87%;
+  }
+
+  @media screen and (max-width: 575.98px) {
+    width: 87%;
+  }
+}
