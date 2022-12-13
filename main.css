@@ -1234,7 +1234,7 @@ h3 {
 }
 
 .contact {
-  background: #edf2ec url("../../assets/images/garden-woman.png") no-repeat 107px bottom;
+  background: #edf2ec url("./assets/images/garden-woman.png") no-repeat 107px bottom;
   padding: 61px 0 90px;
 }
 @media screen and (max-width: 991.98px) {
