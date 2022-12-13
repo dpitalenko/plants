@@ -8,14 +8,14 @@
   @media screen and (max-width: 991.98px) {
     padding: 41px 0 237px;
     background-position: center bottom;
-    background-size: 26%;
+    background-size: 20%;
   }
 
   @media screen and (max-width: 767.98px) {
     padding: 25px 0 29px;
+    background-size: 26%;
   }
 }
-
 
 .contact-title {
   margin-bottom: 36px;
@@ -108,14 +108,15 @@
     position: absolute;
     top: 50px;
     right: 0;
+    z-index: 10;
     display: none;
+    animation: showList 0.5s ease;
 
     .city__item {
       @extend %city-name;
 
       &:hover {
         color: $color-lightgray;
-        cursor: pointer;
 
         &::after {
           border: 0.5px solid $color-lightgray;
@@ -232,6 +233,11 @@
     }
   }
 
+  @media screen and (max-width: 991.98px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media screen and (max-width: 767.98px) {
     margin: 49px auto 0;
     padding: 33px 28px 24px 32px;
@@ -239,7 +245,7 @@
   }
 }
 
-
-
-
-
+@keyframes showList {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

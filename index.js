@@ -126,3 +126,61 @@ priceButtons.forEach((button) => {
 /**
  * Contact us
  */
+
+const cityBlock = document.querySelector(".city__block");
+const cityList = document.querySelector(".city__list");
+const cityItems = document.querySelectorAll(".city__item");
+const addressBlock = document.querySelector(".address");
+
+const data = [{"City": "Yonkers, NY", "Phone": "+1	914	678 0003", "Address": "511 Warburton Ave"},
+              {"City": "Canandaigua, NY", "Phone": "+1	585	393 0001", "Address": "151 Charlotte Street"},
+              {"City": "Sherrill, NY", "Phone": "+1	315	908 0004", "Address": "14 WEST Noyes BLVD"},
+              {"City": "New York City", "Phone": "+1	212	456 0002", "Address": "9 East 91st Street"}
+            ];
+
+const showList = function () {
+  cityList.style = "display: block";
+  cityBlock.classList.add("city__block_active");
+};
+
+const hideList = function () {
+  cityList.style = "display: none";
+  cityBlock.classList.remove("city__block_active");
+};
+
+const showAddress = function (address) {
+  const screenWidth = document.documentElement.scrollWidth;
+  if (screenWidth < 575.98) {
+    const pic = document.querySelector(".contact");
+    pic.style = "background-image: none";
+  }
+  addressBlock.style = "opacity: 1";
+  const values = document.querySelectorAll(".address__value");
+  data.forEach((item) => {
+    if (item.City === address.innerText.trim()) {
+      values[0].innerText = item.City;
+      values[1].innerText = item.Phone;
+      values[2].innerText = item.Address;
+    }
+  });
+};
+
+const hideAddress = function () {
+  addressBlock.style = "opacity: 0";
+};
+
+cityBlock.addEventListener("click", function(e) {
+  hideAddress();
+  showList();
+});
+
+cityList.addEventListener("mouseleave", function(e) {
+  hideList();
+})
+
+cityItems.forEach((item) => {
+  item.addEventListener("click", function(e) {
+    hideList();
+    showAddress(item);
+  });
+});

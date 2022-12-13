@@ -1222,6 +1222,7 @@ h3 {
   line-height: 1.4em;
   color: #499a18;
   letter-spacing: 0.05em;
+  cursor: pointer;
 }
 
 .city .city__list .city__item::after {
@@ -1240,12 +1241,13 @@ h3 {
   .contact {
     padding: 41px 0 237px;
     background-position: center bottom;
-    background-size: 26%;
+    background-size: 20%;
   }
 }
 @media screen and (max-width: 767.98px) {
   .contact {
     padding: 25px 0 29px;
+    background-size: 26%;
   }
 }
 
@@ -1319,11 +1321,13 @@ h3 {
   position: absolute;
   top: 50px;
   right: 0;
+  z-index: 10;
   display: none;
+  -webkit-animation: showList 0.5s ease;
+          animation: showList 0.5s ease;
 }
 .city .city__list .city__item:hover {
   color: #717171;
-  cursor: pointer;
 }
 .city .city__list .city__item:hover::after {
   border: 0.5px solid #717171;
@@ -1430,6 +1434,12 @@ h3 {
     margin-top: 16px;
   }
 }
+@media screen and (max-width: 991.98px) {
+  .address {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .address {
     margin: 49px auto 0;
@@ -1438,6 +1448,23 @@ h3 {
   }
 }
 
+@-webkit-keyframes showList {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showList {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .container {
   width: 1222px;
   margin: 0 auto;
