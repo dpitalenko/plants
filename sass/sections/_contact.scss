@@ -2,7 +2,7 @@
 @import "../components/drop-down";
 
 .contact {
-  background: $bgcolor-lightgreen url('../../assets/images/garden-woman.png') no-repeat 107px bottom;
+  background: $bgcolor-lightgreen url('./assets/images/garden-woman.png') no-repeat 107px bottom;
   padding: 61px 0 90px;
 
   @media screen and (max-width: 991.98px) {
