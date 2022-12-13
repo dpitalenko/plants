@@ -150,7 +150,7 @@ const hideList = function () {
 
 const showAddress = function (address) {
   const screenWidth = document.documentElement.scrollWidth;
-  if (screenWidth < 575.98) {
+  if (screenWidth < 767.98) {
     const pic = document.querySelector(".contact");
     pic.style = "background-image: none";
   }
