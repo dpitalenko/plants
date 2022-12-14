@@ -1,0 +1,42 @@
+@import "../core/typography";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 20px;
+  letter-spacing: 0em;
+  color: $color-lightgray;
+}
+
+div, 
+p {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0;
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 40px;
+  color: $color-green;
+
+  @media screen and (max-width: 991.98px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    font-size: 25px;
+  }
+}
+
+h3 {
+  margin: 0;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 40px;
+  color: $color-black;
+  line-height: 1.25em;
+}

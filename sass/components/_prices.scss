@@ -1,0 +1,42 @@
+@import "../core/typography";
+
+%price-block {
+  margin-bottom: 32px;
+  padding: 13px 41px 13px 39px;
+  width: 250px;
+  height: 50px;
+  background: $bgcolor-lightgreen;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+%price-text {
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 20px;
+  color: $color-black;
+}
+
+%price-arrow-circle {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+}
+
+%price-arrow {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 3px;
+  height: 0.5px;
+  border-radius: 100px;
+  top: 7px;
+  background: $color-lightgray;
+}
+
+%active-price-block {
+  height: 154px;
+  background: $bgcolor-green;
+}
